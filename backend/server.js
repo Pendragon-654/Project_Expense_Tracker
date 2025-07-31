@@ -11,13 +11,25 @@ const incomeRoutes = require("./routes/incomeRoutes");
 const expenseRoutes = require("./routes/expenseRoutes");
 const dashboardRoutes = require("./routes/dashboardRoutes");
 
+const allowedOrigins = [
+  "https://project-expense-tracker-blush.vercel.app", // ✅ Replace with actual deployed frontend
+];
+
 app.use(
-    cors({
-        origin: process.env.CLIENT_URL || "*",
-        methods: ["GET", "POST", "PUT", "DELETE"],
-        allowedHeaders: ["Content-Type", "Authorization"],
-    })
+  cors({
+    origin: function (origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+    credentials: true, // ✅ Optional but good if you ever use cookies
+  })
 );
+
 
 app.use(express.json());
 
