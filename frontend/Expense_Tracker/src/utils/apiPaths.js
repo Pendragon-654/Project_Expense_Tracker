@@ -1,6 +1,6 @@
 import Login from "../pages/Auth/Login";
 
-export const BASE_URL = "http://localhost:8000";
+export const BASE_URL = "https://project-expense-tracker-backend.onrender.com/";
 
 //utils/apiPaths.js
 
