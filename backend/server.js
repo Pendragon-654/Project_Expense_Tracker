@@ -12,7 +12,7 @@ const expenseRoutes = require("./routes/expenseRoutes");
 const dashboardRoutes = require("./routes/dashboardRoutes");
 
 const allowedOrigins = [
-  "https://project-expense-tracker-blush.vercel.app", // ✅ Replace with actual deployed frontend
+  "https://project-expense-tracker-43dq.onrender.com", // ✅ Replace with actual deployed frontend
 ];
 
 app.use(
