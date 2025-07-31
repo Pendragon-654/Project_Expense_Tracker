@@ -47,7 +47,7 @@ const handleLogout = () => {
             fullName={user?.fullName}
             width="w-20"
             height="h-20"
-            style="text-xl"
+            className="text-xl"
           />
         )}
 
