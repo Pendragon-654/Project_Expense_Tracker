@@ -17,14 +17,13 @@ router.post('/login', loginUser);
 router.get('/getuser',protect, getUserInfo);
 
 router.post("/upload-image", upload.single('image'), (req, res) => {
-    if (!req.file) {
-        return res.status(400).json({ message: 'No file uploaded' });
-    }
-    const BASE_URL = process.env.BASE_URL || `http://localhost:${process.env.PORT || 5000}`;
-const imageUrl = `${BASE_URL}/uploads/${req.file.filename}`;
+  if (!req.file || !req.file.path) {
+    return res.status(400).json({ message: 'Upload failed' });
+  }
 
-    res.status(200).json({ imageUrl });
+  res.status(200).json({ imageUrl: req.file.path }); // Cloudinary gives direct URL
 });
+
 
 module.exports = router;
 
