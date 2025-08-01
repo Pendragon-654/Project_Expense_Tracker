@@ -11,6 +11,10 @@ const Last30DaysExpenses = ({ data }) => {
     return () => {};
   }, [data]);
 
+
+  console.log("Prepared chart data:", chartData);
+
+
   return (
     <div className="card col-span-1 min-h-[200px]">
       <div className="flex items-center justify-between mb-2">
