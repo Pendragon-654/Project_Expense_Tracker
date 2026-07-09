@@ -13,6 +13,7 @@ const dashboardRoutes = require("./routes/dashboardRoutes");
 
 const allowedOrigins = [
   "https://project-expense-tracker-43dq.onrender.com", // ✅ Replace with actual deployed frontend
+  "http://localhost:5173",
 ];
 
 app.use(

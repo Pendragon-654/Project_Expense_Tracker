@@ -1,6 +1,4 @@
-import Login from "../pages/Auth/Login";
-
-export const BASE_URL = "https://project-expense-tracker-backend.onrender.com";
+export const BASE_URL = import.meta.env.VITE_BASE_URL || "https://project-expense-tracker-backend.onrender.com";
 
 //utils/apiPaths.js
 
