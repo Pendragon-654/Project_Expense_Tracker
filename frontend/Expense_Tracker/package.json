@@ -9,9 +9,9 @@
   },
   "scripts": {
     "dev": "./scripts/run-with-node20.sh",
-    "build": "./scripts/run-with-node20.sh build",
+    "build": "vite build",
     "lint": "eslint .",
-    "preview": "./scripts/run-with-node20.sh preview"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.11",
